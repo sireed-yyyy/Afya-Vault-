@@ -1,15 +1,17 @@
-// Replace the values below with your Firebase project config and save as firebase-config.js
+
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
 const firebaseConfig = {
-  apiKey: "REPLACE_API_KEY",
-  authDomain: "REPLACE_AUTH_DOMAIN",
-  projectId: "REPLACE_PROJECT_ID",
-  storageBucket: "REPLACE_STORAGE_BUCKET",
-  messagingSenderId: "REPLACE_MESSAGING_SENDER_ID",
-  appId: "REPLACE_APP_ID"
+  apiKey: "AIzaSyCSC0jeU9j16xPWuXNk13cYOawRlAYDT54",
+  authDomain: "afya-vault-crs.firebaseapp.com",
+  databaseURL: "https://afya-vault-crs-default-rtdb.firebaseio.com",
+  projectId: "afya-vault-crs",
+  storageBucket: "afya-vault-crs.firebasestorage.app",
+  messagingSenderId: "198570717231",
+  appId: "1:198570717231:web:11293da115584bbcdc96da",
+  measurementId: "G-Z40F2ZG60X"
 };
-if(Object.keys(firebaseConfig).length) {
-  firebase.initializeApp(firebaseConfig);
-  console.log('Firebase ready');
-} else {
-  console.warn('Firebase config missing - please configure firebase-config.js');
-}
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
